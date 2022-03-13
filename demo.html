@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🌷 LilaCSS Demo</title>
+    <link href="lila.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="" class="current">Home</a>
+            <a href="https://github.com/nsde/lilacss"><svg class="icon" viewBox="0 0 32 32">
+                    <path
+                        d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z">
+                    </path>
+                </svg>Github</a>
+
+        </nav>
+
+        <h1>🌷 LilaCSS Demo</h1>
+        <p>A showcase of LilaCSS formatting in action and how to use it.</p>
+    </header>
+
+    <main>
+
+        <p>This page is a demonstration of the elements that can be formatted using LilaCSS. Each section includes a
+            code
+            block on how to include it in your site's design.</p>
+
+        <h2 id="basic-typography">Basic Typography</h2>
+
+        <p>All the typography of LilaCSS uses <code>rem</code> for
+            sizing.
+            This means that accessibility is maintained for those who change their browser font size. The
+            <code>body</code> element has a size of <code>1.15rem</code> which makes all the standard font sizes
+            slightly
+            larger. This equates to <code>18.4px</code> for paragraph text,
+            instead of the standard <code>16px</code>.</p>
+
+        <p>The heading elements also have an increased top margin in order to break blocks of text up better.</p>
+
+        <h1 id="heading-1-3rem">Heading 1 <code>3rem</code></h1>
+
+        <h2 id="heading-2-26rem">Heading 2 <code>2.6rem</code></h2>
+
+        <h3 id="heading-3-2rem">Heading 3 <code>2rem</code></h3>
+
+        <h4 id="heading-4-144rem">Heading 4 <code>1.44rem</code></h4>
+
+        <h5 id="heading-5-115rem">Heading 5 <code>1.15rem</code></h5>
+
+        <h6 id="heading-6-096rem">Heading 6 <code>0.96rem</code></h6>
+
+        <h3 id="links--buttons">Links &amp; Buttons</h3>
+
+        <p>Links are formatted very simply on LilaCSS (shock horror). They use the <code>accent</code> CSS variable and
+            are underlined. There is a
+            <code>:hover</code> effect that removes the underline.
+        </p>
+
+        <p>Buttons use the same <code>accent</code> CSS variable for their
+            colour. When hovering, there is an opacity effect.</p>
+
+        <p><a href="https://example.com">I'm a hyperlink</a></p>
+
+        <p><button>I'm a button</button></p>
+
+        <p><a href="https://example.com"><button>I'm a button with a link</button></a></p>
+
+        <h2 id="other-typography-elements">Other typography elements</h2>
+
+        <p>There are a number of other typography elements that you can use with LilaCSS. Some of the common ones
+            are:
+        </p>
+
+        <ul>
+            <li>All the standard stuff, like <strong>bold</strong>, <em>italic</em> and <u>underlined</u> text.</li>
+            <li><mark>Highlighting text</mark> using the <code>mark</code>
+                element.</li>
+            <li>Adding <code>inline code</code> using the <code>code</code> element.</li>
+            <li>Displaying keyboard commands like <kbd>ALT+F4</kbd> using the <code>kbd</code> element.</li>
+        </ul>
+
+        <h3 id="lists">Lists</h3>
+
+        <p>We all love a good list, right?</p>
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <ol>
+            <li>Do this thing</li>
+            <li>Do that thing</li>
+            <li>Do the other thing</li>
+        </ol>
+
+        <h3 id="blockquotes">Blockquotes</h3>
+
+        <p>Sometimes you may want to quote someone else in your HTML. For this we use the <code>blockquote</code>
+            element. Here's what a quote looks like
+            with
+            LilaCSS:</p>
+
+        <blockquote>
+            <p>Friends don't spy; true friendship is about privacy, too.</p>
+
+            <p><cite>– Stephen King</cite></p>
+        </blockquote>
+
+        <h3 id="code-blocks">Code blocks</h3>
+
+        <p>Code blocks are different from the inline <code>code</code>
+            element.
+            Code blocks are used when you want to display a block of code, like this:</p>
+
+        <h2 id="navigation">Navigation</h2>
+
+        <p>The <code>nav</code> menu is deliberately designed to be
+            extremely
+            simple so that you can improve on it as you see fit. Or, just leave it as is to have a good looking,
+            functional
+            navigation menu.</p>
+
+        <p>There's no JavaScript or checkbox CSS hacks here. It's just a collection of simple “buttons” that wrap to the
+            given width of the page:</p>
+
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Blog</a>
+            <a href="">Notes</a>
+            <a href="">Contact</a>
+        </nav>
+
+        <p>The <code>nav</code> menu will also adapt to smaller screens
+            automatically so that it doesn't take up too much space.</p>
+
+        <p>To add a <code>nav</code> menu, just add the following to the
+            <code>&lt;header&gt;</code> section of your site:
+        </p>
+
+        <h2 id="images">Images</h2>
+
+        <p>In LilaCSS, images within the <code>main</code> element are
+            always full width and have rounded edges to them. The <code>figcaption</code> element is also formatted in
+            LilaCSS.
+            Here are
+            examples of images with and without a caption:</p>
+
+        <p><img src="https://simplecss.org/assets/images/dog-ipad.jpg" alt="A dog at an iPad" /></p>
+
+        <figure>
+            <img alt="This is a black swan" src="https://simplecss.org/assets/images/goose.jpg" />
+            <figcaption>This is a black swan</figcaption>
+        </figure>
+
+        <h2 id="accordions">Accordions</h2>
+
+        <p>Accordions are cool to play with. They're especially useful when it comes to things like FAQ pages. Many
+            people
+            invoke JavaScript, or <code>div</code> for life when they use
+            accordions. I don't really understand why that is when it's available in plain old HTML:</p>
+
+        <details>
+            <summary>Spoiler alert!</summary>
+            <p>Hello :) 🙂</p>
+        </details>
+
+        <h2 id="tables">Tables</h2>
+
+        <p>Like lists, sometimes you may need to add a table to your webpage. In LilaCSS tables automatically
+            highlight
+            every other row to make reading easier. Table header text is also bold. Here's what they look like:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jackie</td>
+                    <td>012345</td>
+                </tr>
+                <tr>
+                    <td>Lucy</td>
+                    <td>112346</td>
+                </tr>
+                <tr>
+                    <td>David</td>
+                    <td>493029</td>
+                </tr>
+                <tr>
+                    <td>Kerry</td>
+                    <td>395499</td>
+                </tr>
+                <tr>
+                    <td>Steve</td>
+                    <td>002458</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="forms">Forms</h2>
+
+        <p>Forms are useful for all kinds of things on webpages. Contact forms, newsletter sign ups etc. Forms also look
+            pretty good on LilaCSS:</p>
+
+        <form>
+            <p><strong>This is just a test form. It doesn't do anything.</strong></p>
+            <p>
+                <select>
+                    <option selected="selected" value="1">Title</option>
+                    <option value="2">Mr</option>
+                    <option value="3">Miss</option>
+                    <option value="4">Mrs</option>
+                    <option value="5">Other</option>
+                </select>
+            </p>
+            <p>
+                <label>First name</label><br />
+                <input type="text" name="first_name" />
+            </p>
+            <p>
+                <label>Surname</label><br />
+                <input type="text" name="surname" />
+            </p>
+            <p>
+                <label>Email</label><br />
+                <input type="email" name="email" required="" />
+            </p>
+            <p>
+                <label>Enquiry type:</label><br />
+                <label><input checked="checked" name="type" type="radio" value="sales" /> Sales</label> <br />
+                <label><input name="type" type="radio" value="support" /> Support</label> <br />
+                <label><input name="type" type="radio" value="billing" /> Billing</label>
+            </p>
+            <p>
+                <label>Message</label><br />
+                <textarea rows="6"></textarea>
+            </p>
+            <p>
+                <label for="cars">Choose a car:</label><br />
+                <select name="cars" id="cars" multiple="">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" id="checkbox" value="terms" />
+                    I agree to the <a href="#">terms and conditions</a>
+                </label>
+            </p>
+
+            <button>Send</button>
+            <button type="reset">Reset</button>
+            <button disabled="disabled">Disabled</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>LilaCSS was created by <a href="https://onlix.me">ONLIX</a> and is licensed under the MIT license.</p>
+    </footer>
+
+</body>
+
+</html>
