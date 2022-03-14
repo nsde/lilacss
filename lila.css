@@ -147,7 +147,20 @@ h3 {
     }
 }
 
-div
+div.article-info {
+    background-color: var(--accent-bg);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+p.reading-time::before {content: "⌛ ";}
+p.reading-time::after {content: " mins read";}
+
+p.published::before {content: "📅 Published ";}
+
+p.author::before {content: "✍️ Written by ";}
+
 
 /* Format links & buttons */
 a,

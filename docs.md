@@ -1,11 +1,13 @@
-# Classes
-```yml
+# Example structure
+```css
 - body
     - header
-        - nav # Navigation bar with links
+        - nav 
             - a
             - a
-            - svg # Social Media Icon
+            - svg /* Social Media Icons */
     - main
-    - 
+        - article-info
+    - footer
+        - socials
 ```
