@@ -1,12 +1,12 @@
-# LilaCSS
-🌷 LilaCSS – Simply useful & modern.
+# 🌷 LilaCSS – Simply useful & modern.
 
-### [How to see a live demo of LilaCSS](#demo)
 
+![Image](https://i.ibb.co/CwKV5Pv/drawing.png)
 ![Screenshot](https://i.ibb.co/KrXqFjD/image.png)
 
 *Demo with dark mode enabled*
 ***
+### [How to see a live demo of LilaCSS](#demo)
 
 ## Features
 - Auto-Dark Mode
