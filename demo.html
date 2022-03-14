@@ -57,15 +57,6 @@
 
         <h6 id="heading-6-096rem">Heading 6 <code>0.96rem</code></h6>
 
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;h2&gt;This is a H2 header&lt;h2&gt;
-
-&lt;p&gt;This is some paragraph text.&lt;/p&gt;
-</code></pre>
-            </div>
-        </div>
-
         <h3 id="links--buttons">Links &amp; Buttons</h3>
 
         <p>Links are formatted very simply on LilaCSS (shock horror). They use the <code
@@ -80,17 +71,6 @@
         <p><button>I’m a button</button></p>
 
         <p><a href="https://example.com"><button>I’m a button with a link</button></a></p>
-
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;a href="https://example.com"&gt;I'm a hyperlink&lt;/a&gt;
-
-&lt;button&gt;I'm a button&lt;/button&gt;
-
-&lt;a href="https://example.com"&gt;&lt;button&gt;I'm a button with a link&lt;/button&gt;&lt;/a&gt;
-</code></pre>
-            </div>
-        </div>
 
         <h2 id="other-typography-elements">Other typography elements</h2>
 
@@ -108,18 +88,6 @@
                    >kbd</code> element.</li>
         </ul>
 
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;b&gt;Bold text&lt;/b&gt;
-&lt;i&gt;Italic text&lt;/i&gt;
-&lt;u&gt;Underlined text&lt;/u&gt;
-&lt;mark&gt;Highlighted text&lt;/mark&gt;
-&lt;code&gt;Inline code&lt;/code&gt;
-&lt;kbd&gt;Alt+F4&lt;/kbd&gt;
-</code></pre>
-            </div>
-        </div>
-
         <h3 id="lists">Lists</h3>
 
         <p>We all love a good list, right? I know my wife does!</p>
@@ -136,24 +104,6 @@
             <li>Do the other thing</li>
         </ol>
 
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code># Bulleted list
-&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
-
-# Numbered list
-&lt;ol&gt;
-  &lt;li&gt;Do this thing&lt;/li&gt;
-  &lt;li&gt;Do that thing&lt;/li&gt;
-  &lt;li&gt;Do the other thing&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre>
-            </div>
-        </div>
         <h3 id="blockquotes">Blockquotes</h3>
 
         <p>Sometimes you may want to quote someone else in your HTML. For this we use the <code
@@ -167,15 +117,6 @@
             <p><cite>– Stephen King</cite></p>
         </blockquote>
 
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;blockquote&gt;
-  &lt;p&gt;Friends don’t spy; true friendship is about privacy, too.&lt;/p&gt;
-  &lt;p&gt;&lt;cite&gt;– Stephen King&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</code></pre>
-            </div>
-        </div>
 
         <h3 id="code-blocks">Code blocks</h3>
 
@@ -183,35 +124,6 @@
             element.
             Code blocks are used when you want to display a block of code, like this:</p>
 
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>body {
-  color: var(--text);
-  background: var(--bg);
-  font-size: 1.15rem;
-  line-height: 1.5;
-  margin: 0;
-}
-</code></pre>
-            </div>
-        </div>
-
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;pre&gt;
-&lt;code&gt;
-  body {
-    color: var(--text);
-    background: var(--bg);
-    font-size: 1.15rem;
-    line-height: 1.5;
-    margin: 0;
-  }
-&lt;/code&gt;
-&lt;/pre&gt;
-</code></pre>
-            </div>
-        </div>
         <h2 id="navigation">Navigation</h2>
 
         <p>The <code>nav</code> menu is deliberately designed to be
@@ -237,20 +149,6 @@
         <p>To add a <code>nav</code> menu, just add the following to the
             <code>&lt;header&gt;</code> section of your site:</p>
 
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;nav&gt;
-  &lt;a href="/"&gt;Home&lt;/a&gt;
-  &lt;a href="/about"&gt;About&lt;/a&gt;
-  &lt;a href="/blog"&gt;Blog&lt;/a&gt;
-  &lt;a href="/notes"&gt;Notes&lt;/a&gt;
-  &lt;a href="/guestbook"&gt;Guestbook&lt;/a&gt;
-  &lt;a href="/contact"&gt;Contact&lt;/a&gt;
-&lt;/nav&gt;
-</code></pre>
-            </div>
-        </div>
-
         <h2 id="images">Images</h2>
 
         <p>In LilaCSS, images within the <code>main</code> element are
@@ -266,20 +164,6 @@
             <figcaption>This is a black swan</figcaption>
         </figure>
 
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code># Standard image
-&lt;img alt="A dog on an iPad" src="/assets/images/dog-ipad.jpg" /&gt;
-
-# Image with a caption
-&lt;figure&gt;
-  &lt;img alt="This is a black swan" src="/assets/images/goose.jpg" /&gt;
-  &lt;figcaption&gt;This is a black swan&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
-            </div>
-        </div>
-
         <h2 id="accordions">Accordions</h2>
 
         <p>Accordions are cool to play with. They’re especially useful when it comes to things like FAQ pages. Many
@@ -291,16 +175,6 @@
             <summary>Spoiler alert!</summary>
             <p>You smell. 🙂</p>
         </details>
-
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;details&gt;
-  &lt;summary&gt;Spoiler alert!&lt;/summary&gt;
-  &lt;p&gt;You smell. 🙂&lt;/p&gt;
-&lt;/details&gt;
-</code></pre>
-            </div>
-        </div>
 
         <h2 id="tables">Tables</h2>
 
@@ -338,42 +212,6 @@
                 </tr>
             </tbody>
         </table>
-
-        <div>
-            <div class="highlight">
-                <pre class="highlight"><code>&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Number&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Jackie&lt;/td&gt;
-      &lt;td&gt;012345&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Lucy&lt;/td&gt;
-      &lt;td&gt;112346&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;David&lt;/td&gt;
-      &lt;td&gt;493029&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Kerry&lt;/td&gt;
-      &lt;td&gt;395499&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Steve&lt;/td&gt;
-      &lt;td&gt;002458&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre>
-            </div>
-        </div>
 
         <h2 id="forms">Forms</h2>
 
@@ -433,59 +271,6 @@
             <button type="reset">Reset</button>
             <button disabled="disabled">Disabled</button>
         </form>
-
-        <pre><code class="language-HTML">&lt;form&gt;
-  &lt;p&gt;&lt;strong&gt;This is just a test form. It doesn't do anything.&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;select&gt;
-    &lt;option selected="selected" value="1"&gt;Title&lt;/option&gt;
-    &lt;option value="2"&gt;Mr&lt;/option&gt;
-    &lt;option value="3"&gt;Miss&lt;/option&gt;
-    &lt;option value="4"&gt;Mrs&lt;/option&gt;
-    &lt;option value="5"&gt;Other&lt;/option&gt;
-  &lt;/select&gt;&lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;First name&lt;/label&gt;&lt;br&gt;
-  &lt;input type="text" name="first_name"&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Surname&lt;/label&gt;&lt;br&gt;
-  &lt;input type="text" name="surname"&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Email&lt;/label&gt;&lt;br&gt;
-  &lt;input type="email" name="email" required=""&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Enquiry type:&lt;/label&gt;&lt;br&gt;
-  &lt;label&gt;&lt;input checked="checked" name="type" type="radio" value="sales" /&gt; Sales&lt;/label&gt; &lt;br /&gt;
-  &lt;label&gt;&lt;input name="type" type="radio" value="support" /&gt; Support&lt;/label&gt; &lt;br /&gt;
-  &lt;label&gt;&lt;input name="type" type="radio" value="billing" /&gt; Billing&lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Message&lt;/label&gt;&lt;br&gt;
-  &lt;textarea rows="6"&gt;&lt;/textarea&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;
-  &lt;input type="checkbox" id="checkbox" value="terms"&gt;
-  I agree to the &lt;a href="#"&gt;terms and conditions&lt;/a&gt;
-  &lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;button&gt;Send&lt;/button&gt;
-  &lt;button type="reset"&gt;Reset&lt;/button&gt;
-  &lt;button disabled="disabled"&gt;Disabled&lt;/button&gt;
-&lt;/form&gt;
-</code></pre>
-
-
     </main>
 
     <footer>
