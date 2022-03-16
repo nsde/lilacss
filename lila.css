@@ -6,12 +6,12 @@
 
     /* Default (light) theme */
     --bg: #fff;
-    --accent-bg: #e5ddff;
+    --accent-bg: #F3E8FF;
     --text: #111111;
     --text-light: #585858;
     --border: #00000000;
-    --accent: #763bff;
-    --code: #7d37fd;
+    --accent: #A855F7;
+    --code: #9333EA;
     --preformatted: #444;
     --marked: #cc9fff98;
     --disabled: #efefef;
@@ -207,8 +207,9 @@ div.card {
 }
 
 div.card:hover {
-    filter: brightness(1.2) saturate(1.2);
+    filter: brightness(1.1) saturate(1.2);
     transition: .5s;
+    cursor: pointer;
 }
 
 div.card img {
@@ -328,6 +329,7 @@ input[type="button"]:focus,
 input[type="button"]:enabled:hover {
     filter: brightness(1.2);
     transition: .3s;
+    cursor: pointer;
 }
 
 /* Format navigation */
@@ -474,6 +476,11 @@ input {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+}
+
+select, input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
 }
 
 /* Drop-down arrow */
