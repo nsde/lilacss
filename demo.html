@@ -36,9 +36,11 @@
         
         <p>This page is a demonstration of the elements that can be formatted using LilaCSS. Each section includes a
             code
-            block on how to include it in your site’s design.
+            block on how to include it in your site's design.
         </p>
-            
+        
+        <img class="dark-invert" src="https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg">
+        
         <p>All the typography of LilaCSS uses <code>rem</code> for
             sizing.
             This means that accessibility is maintained for those who change their browser font size. The <code
@@ -71,11 +73,11 @@
         <p>Buttons use the same <code>accent</code> CSS variable for their
             colour. When hovering, there is an opacity effect.</p>
 
-        <p><a href="https://example.com">I’m a hyperlink</a></p>
+        <p><a href="https://example.com">I'm a hyperlink</a></p>
 
-        <p><button>I’m a button</button></p>
+        <p><button>I'm a button</button></p>
 
-        <p><a href="https://example.com"><button>I’m a button with a link</button></a></p>
+        <p><a href="https://example.com"><button>I'm a button with a link</button></a></p>
 
         <h2 id="other-typography-elements">Other typography elements</h2>
 
@@ -95,7 +97,7 @@
 
         <h3 id="lists">Lists</h3>
 
-        <p>We all love a good list, right? I know my wife does!</p>
+        <p>We all love a good list, right?</p>
 
         <ul>
             <li>Item 1</li>
@@ -109,15 +111,33 @@
             <li>Do the other thing</li>
         </ol>
 
+        <div class="row">
+            <p class="w-2">One</p>
+            <p class="w-2">Two</p>
+        </div>
+        
+        <div class="row">
+            <p class="w-3">One</p>
+            <p class="w-3">Two</p>
+            <p class="w-3">Three</p>
+        </div>
+        
+        <div class="row">
+            <p class="w-4">One</p>
+            <p class="w-4">Two</p>
+            <p class="w-4">Three</p>
+            <p class="w-4">Four</p>
+        </div>
+
         <h3 id="blockquotes">Blockquotes</h3>
 
         <p>Sometimes you may want to quote someone else in your HTML. For this we use the <code
-               >blockquote</code> element. Here’s what a quote looks like
+               >blockquote</code> element. Here's what a quote looks like
             with
             LilaCSS:</p>
 
         <blockquote>
-            <p>Friends don’t spy; true friendship is about privacy, too.</p>
+            <p>Friends don't spy; true friendship is about privacy, too.</p>
 
             <p><cite>– Stephen King</cite></p>
         </blockquote>
@@ -137,7 +157,7 @@
             functional
             navigation menu.</p>
 
-        <p>There’s no JavaScript or checkbox CSS hacks here. It’s just a collection of simple “buttons” that wrap to the
+        <p>There's no JavaScript or checkbox CSS hacks here. It's just a collection of simple “buttons” that wrap to the
             given width of the page:</p>
 
         <nav>
@@ -149,7 +169,7 @@
         </nav>
 
         <p>The <code>nav</code> menu will also adapt to smaller screens
-            automatically so that it doesn’t take up too much space.</p>
+            automatically so that it doesn't take up too much space.</p>
 
         <p>To add a <code>nav</code> menu, just add the following to the
             <code>&lt;header&gt;</code> section of your site:</p>
@@ -171,21 +191,21 @@
 
         <h2 id="accordions">Accordions</h2>
 
-        <p>Accordions are cool to play with. They’re especially useful when it comes to things like FAQ pages. Many
+        <p>Accordions are cool to play with. They're especially useful when it comes to things like FAQ pages. Many
             people
             invoke JavaScript, or <code>div</code> for life when they use
-            accordions. I don’t really understand why that is when it’s available in plain old HTML:</p>
+            accordions. I don't really understand why that is when it's available in plain old HTML:</p>
 
         <details>
             <summary>Spoiler alert!</summary>
-            <p>You smell. 🙂</p>
+            <p>Hello 🙂</p>
         </details>
 
         <h2 id="tables">Tables</h2>
 
         <p>Like lists, sometimes you may need to add a table to your webpage. In LilaCSS tables automatically
             highlight
-            every other row to make reading easier. Table header text is also bold. Here’s what they look like:</p>
+            every other row to make reading easier. Table header text is also bold. Here's what they look like:</p>
 
         <table>
             <thead>

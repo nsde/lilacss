@@ -6,7 +6,7 @@
 
     /* Default (light) theme */
     --bg: #fff;
-    --accent-bg: #dfcdff;
+    --accent-bg: #ccc3f1;
     --text: #111111;
     --text-light: #585858;
     --border: #cccccc;
@@ -39,6 +39,11 @@
 
     nav a {
         background-color: var(--accent-bg);
+    }
+
+
+    img.dark-invert {
+        filter: invert(1) hue-rotate(180deg);
     }
 }
 
@@ -98,6 +103,28 @@ body>footer {
     text-align: center;
     border-top: 1px solid var(--text-light);
 }
+
+div.row {
+    display: flex;
+    width: 100%;
+}
+
+.w-10        {width: 10%};
+.w-9         {width: 11.1%}
+.w-8         {width: 12.5%}
+.w-7         {width: 14.2%}
+.w-6         {width: 16.6%;}
+.w-20, .w-5   {width: 20%;}
+.w-25, .w-4   {width: 25%}
+.w-30        {width: 30%;}
+.w-3         {width: 33.3%}
+.w-40        {width: 40%;}
+.w-50, .w-2   {width: 50%;}
+.w-60        {width: 60%;}
+.w-70        {width: 70%;}
+.w-80        {width: 80;}
+.w-90        {width: 90%;}
+.w-100, .w-1  {width: 100%;}
 
 /* Format headers */
 h1 {
@@ -541,7 +568,7 @@ samp {
 
 kbd {
     color: var(--preformatted);
-    border: 1px solid var(--preformatted);
+    border: 1px solid var(--accent);
     /* border-bottom: 1px solid var(--preformatted); */
     border-radius: 5px;
     padding: 0.1rem 0.4rem;
