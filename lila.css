@@ -6,14 +6,14 @@
 
     /* Default (light) theme */
     --bg: #fff;
-    --accent-bg: #ccc3f1;
+    --accent-bg: #afa2eb;
     --text: #111111;
     --text-light: #585858;
-    --border: #cccccc;
-    --accent: #9c67ff;
+    --border: #ffffff52;
+    --accent: #763bff;
     --code: #7d37fd;
     --preformatted: #444;
-    --marked: #e1aafa98;
+    --marked: #cc9fff98;
     --disabled: #efefef;
 }
 
@@ -512,11 +512,18 @@ mark {
     background: var(--marked);
 }
 
+@media (prefers-color-scheme: dark) {
+    .dark-invert {
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 50px 50px 0 rgba(255, 255, 255, 0.308);
+    }
+}
+
 main img,
 main video {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 50px 50px 0 rgba(0, 0, 0, 0.308);
 }
 
 .icon {
