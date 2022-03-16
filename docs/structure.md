@@ -21,7 +21,7 @@
 ```
 ... and so on:
 
-![](rows.png)
+![](media/rows.png)
 
 
 ## Blog
@@ -46,7 +46,7 @@
 ```
 
 ### Info Box (Small)
-![Info Box (Small)](infobox-small.png)
+![Info Box (Small)](media/infobox-small.png)
 
 ### Info Box (Large )
-![Info Box (Large)](infobox-large.png)
+![Info Box (Large)](media/infobox-large.png)

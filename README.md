@@ -9,14 +9,24 @@
 ### [How to see a live demo of LilaCSS](#demo)
 
 ## Features
-- Auto-Dark Mode
+- Auto Dark Mode
 - Responsive
 - Lightweight
+- No `!important`, you decide
 
 ### Advantages over Simple.css
 - More modern style
   - Animations
-- More features for blogging
+  - Shadows
+  - New dark mode
+  - Improved color scheme
+
+- More features for blogging & articles
+  - Article info card `text-box`
+
+- Tools
+  - [Rows](docs/structure.md#Rows) `w-<n>`
+  - [Dark Mode auto-invertion of images](docs/classes.md#Dark+Invert+for+Images) `dark-invert`
 
 ## Download (Linux)
 ```sh

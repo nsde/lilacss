@@ -6,10 +6,10 @@
 
     /* Default (light) theme */
     --bg: #fff;
-    --accent-bg: #afa2eb;
+    --accent-bg: #e5ddff;
     --text: #111111;
     --text-light: #585858;
-    --border: #ffffff52;
+    --border: #00000000;
     --accent: #763bff;
     --code: #7d37fd;
     --preformatted: #444;
@@ -37,14 +37,19 @@
         opacity: 0.9;
     }
 
-    nav a {
-        background-color: var(--accent-bg);
-    }
-
-
+    
     img.dark-invert {
         filter: invert(1) hue-rotate(180deg);
     }
+
+    .dark-invert {
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 50px 50px 0 rgba(255, 255, 255, 0.308);
+    }
+}
+
+nav a {
+    filter: brightness(1.1);
+    background-color: var(--accent-bg);
 }
 
 html {
@@ -72,7 +77,6 @@ body>* {
 /* Make the header bg full width, but the content inline with body */
 body>header {
     background: var(--accent-bg);
-    /* border-bottom: 1px solid var(--border); */
     text-align: center;
     padding: 0 0.5rem 2rem 0.5rem;
     grid-column: 1 / -1;
@@ -90,7 +94,6 @@ body>header p {
     margin: 1rem auto;
 }
 
-/* Add a little padding to ensure spacing is correct between content and nav */
 main {
     padding-top: 1.5rem;
 }
@@ -109,22 +112,36 @@ div.row {
     width: 100%;
 }
 
-.w-10        {width: 10%};
-.w-9         {width: 11.1%}
-.w-8         {width: 12.5%}
-.w-7         {width: 14.2%}
-.w-6         {width: 16.6%;}
-.w-20, .w-5   {width: 20%;}
-.w-25, .w-4   {width: 25%}
-.w-30        {width: 30%;}
-.w-3         {width: 33.3%}
-.w-40        {width: 40%;}
-.w-50, .w-2   {width: 50%;}
-.w-60        {width: 60%;}
-.w-70        {width: 70%;}
-.w-80        {width: 80;}
-.w-90        {width: 90%;}
-.w-100, .w-1  {width: 100%;}
+div.input-box {
+    display: inline;
+}
+
+div.input-box input {
+    width: 80%;
+}
+
+@media only screen and (min-width: 580px) {
+    div.input-box input {
+        width: 70%;
+    } 
+}
+
+.w-10           {width: 10%};
+.w-9            {width: 11.1%}
+.w-8            {width: 12.5%}
+.w-7            {width: 14.2%}
+.w-6            {width: 16.6%;}
+.w-20, .w-5     {width: 20%;}
+.w-25, .w-4     {width: 25%}
+.w-30           {width: 30%;}
+.w-3            {width: 33.3%}
+.w-40           {width: 40%;}
+.w-50, .w-2     {width: 50%;}
+.w-60           {width: 60%;}
+.w-70           {width: 70%;}
+.w-80           {width: 80;}
+.w-90           {width: 90%;}
+.w-100, .w-1    {width: 100%;}
 
 /* Format headers */
 h1 {
@@ -178,6 +195,21 @@ h3 {
         font-size: 1.25rem;
     }
 }
+
+div.cards {
+    display: flex;
+}
+
+div.cards div.card {
+    margin: .5rem;
+}
+
+div.cards div.card img {
+    width: 90%;
+}
+
+div.card
+
 
 div.text-box {
     background-color: var(--accent-bg);
@@ -261,6 +293,21 @@ abbr {
     cursor: help;
 }
 
+div:hover {
+    opacity: 90%;
+    transition: .5s;
+}
+
+div {
+    opacity: 100%;
+    transition: .5s;
+}
+
+.fade-away:hover {
+    opacity: 0%;
+    transition: 1s;
+}
+
 button:focus,
 button:enabled:hover,
 [role="button"]:focus,
@@ -273,7 +320,6 @@ input[type="button"]:focus,
 input[type="button"]:enabled:hover {
     filter: brightness(1.2);
     transition: .3s;
-    cursor: pointer;
 }
 
 /* Format navigation */
@@ -302,6 +348,10 @@ nav ol li {
     display: inline-block;
 }
 
+nav a.current {
+    opacity: 50%;
+}
+
 nav a,
 nav a:visited {
     margin: 0 1rem 1rem 0;
@@ -324,7 +374,7 @@ nav a:last-child {
 }
 
 /* Reduce nav side on mobile */
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
     nav a {
         border: none;
         padding: 0;
@@ -332,6 +382,10 @@ nav a:last-child {
         text-decoration: underline;
         line-height: 1;
     }
+} */
+
+progress {
+    color: red;
 }
 
 /* Format the expanding box */
@@ -391,7 +445,7 @@ tr:nth-child(even) {
 
 table caption {
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
 }
 
 /* Format forms */
@@ -408,13 +462,13 @@ input {
     border-radius: 5px;
     box-shadow: none;
     box-sizing: border-box;
-    width: 60%;
+    /* width: 60%; */
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
 }
 
-/* Add arrow to drop-down */
+/* Drop-down arrow */
 select {
     background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
         linear-gradient(135deg, var(--text) 51%, transparent 49%);
@@ -424,7 +478,7 @@ select {
 }
 
 select[multiple] {
-    background-image: none !important;
+    background-image: none /*!important*/;
 }
 
 /* checkbox and radio button style */
@@ -461,7 +515,7 @@ input[type="checkbox"]:checked::after {
 
 input[type="radio"]:checked::after {
     /* creates a colored circle for the checked radio button  */
-    content: " ";
+    /* content: " ";
     width: 0.25em;
     height: 0.25em;
     border-radius: 100%;
@@ -469,7 +523,7 @@ input[type="radio"]:checked::after {
     top: 0.125em;
     background: var(--bg);
     left: 0.125em;
-    font-size: 32px;
+    font-size: 32px; */
 }
 
 /* Make the textarea wider than other inputs */
@@ -479,7 +533,6 @@ textarea {
 
 /* Makes input fields wider on smaller screens */
 @media only screen and (max-width: 720px) {
-
     textarea,
     select,
     input {
@@ -510,12 +563,6 @@ mark {
     padding: 2px 5px;
     border-radius: 4px;
     background: var(--marked);
-}
-
-@media (prefers-color-scheme: dark) {
-    .dark-invert {
-        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 50px 50px 0 rgba(255, 255, 255, 0.308);
-    }
 }
 
 main img,
