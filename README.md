@@ -6,7 +6,7 @@
 
 *Demo with dark mode enabled*
 ***
-### [How to see a live demo of LilaCSS](#demo-lix)
+### [How to see a live demo of LilaCSS](#demo-linux)
 
 ## Features
 - Auto Dark Mode
