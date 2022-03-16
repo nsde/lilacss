@@ -28,7 +28,7 @@ wget https://cdn.jsdelivr.net/gh/nsde/lilacss/lila.min.css
 mkdir lilacss && cd lilacss # prepare
 wget -O lila.css.zip https://codeload.github.com/nsde/lilacss/zip/refs/heads/main > /dev/null 2>&1 # download
 unzip lila.css.zip > /dev/null 2>&1 && rm lila.css.zip # install and remove the unneeded zip file 
-firefox lilacss-main/demo.html # show
+firefox lilacss-main/examples/demo.html # show
 clear && echo "Done! Showing LilaCSS demo in Firefox" # info message
 ```
 
