@@ -35,7 +35,7 @@ wget https://cdn.jsdelivr.net/gh/nsde/lilacss/lila.min.css
 
 ## Demo (Linux)
 ```sh
-rm -rf mkdir # remove if already existing
+rm -rf lilacss # remove if already existing
 mkdir lilacss && cd lilacss # prepare
 wget -O lila.css.zip https://codeload.github.com/nsde/lilacss/zip/refs/heads/main > /dev/null 2>&1 # download
 unzip lila.css.zip > /dev/null 2>&1 && rm lila.css.zip # install and remove the unneeded zip file 
