@@ -120,6 +120,28 @@ div.input-box input {
     width: 80%;
 }
 
+.progress {
+    margin: 50px auto;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--accent-bg);
+    border-radius: 5px;
+}
+  
+.progress .bar {
+    height: 100%;
+    width: 50%;
+    background-color: var(--accent);
+    border-radius: 5px;
+}
+
+.progress p {
+    color: white;
+    padding-left: .2rem;
+    /* font-weight: bold; */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.829);
+}
+
 @media only screen and (min-width: 580px) {
     div.input-box input {
         width: 70%;
@@ -228,6 +250,11 @@ div.text-box {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+div.text-box:hover {
+    opacity: 0.8;
+    transition: 0.1s;
+}
+
 div.article-info p {
     margin: auto;
 }
@@ -256,7 +283,9 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: none;
+    /* text-decoration: none; */
+    opacity: 80%;
+    transition: .5s;
 }
 
 button,
@@ -393,10 +422,6 @@ nav a:last-child {
         line-height: 1;
     }
 } */
-
-progress {
-    color: red;
-}
 
 /* Format the expanding box */
 details {
@@ -578,6 +603,12 @@ mark {
     padding: 2px 5px;
     border-radius: 4px;
     background: var(--marked);
+}
+
+mark:hover {
+    color: var(--font);
+    background-color: var(--bg);
+    transition: 1s;
 }
 
 main img,
