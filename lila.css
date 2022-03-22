@@ -17,18 +17,31 @@
     --disabled: #efefef;
 }
 
+.light-invert {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body>header.text-shadow {
+    text-shadow: 0px 0px 250px #ffffff, 0px 0px 50px #ffffff, 0px 0px 50px #ffffff;
+}
+
+body>header {
+    opacity: 1.0;
+    background-image: var(--image);
+}
+
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #181927;
-        --accent-bg: #ffffff04;
+        --accent-bg: #c6b4ff13;
         --text: #dcdcdc;
         --text-light: #ffffffd8;
         --border: #ffffff00;
         --accent: #e770d7;
         --code: #f062b5;
         --preformatted: #ccc;
-        --marked: #ff9efad5;
+        --marked: #ff9efab0;
         --disabled: #111;
     }
 
@@ -37,13 +50,18 @@
         opacity: 0.9;
     }
 
-    
-    img.dark-invert {
-        filter: invert(1) hue-rotate(180deg);
+    body>header.text-shadow {
+        text-shadow: 0px 0px 400px #00000000, 0px 0px 20px #000000, 0px 0px 20px #000000, 0px 0px 50px #000000, 0px 0px 25px #000000, 0px 0px 50px #000000, 0px 0px 25px #000000;
     }
 
     .dark-invert {
+        filter: invert(1) hue-rotate(180deg);
         box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 50px 50px 0 rgba(255, 255, 255, 0.308);
+    }
+
+    .light-invert {
+        filter: none;
+        box-shadow: none;
     }
 }
 
@@ -76,7 +94,12 @@ body>* {
 
 /* Make the header bg full width, but the content inline with body */
 body>header {
-    background: var(--accent-bg);
+    /* background: var(--accent-bg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    position: relative;
     text-align: center;
     padding: 0 0.5rem 2rem 0.5rem;
     grid-column: 1 / -1;
@@ -131,15 +154,15 @@ div.input-box input {
 .progress .bar {
     height: 100%;
     width: 50%;
-    background-color: var(--accent);
+    background-color: var(--code);
     border-radius: 5px;
 }
 
 .progress p {
     color: white;
-    padding-left: .2rem;
-    /* font-weight: bold; */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.829);
+    padding-left: .5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.829);
 }
 
 @media only screen and (min-width: 580px) {
@@ -228,7 +251,7 @@ div.card {
     margin: .5rem;
 }
 
-div.card:hover {
+div.card:hover, header.a {
     filter: brightness(1.1) saturate(1.2);
     transition: .5s;
     cursor: pointer;
@@ -403,9 +426,14 @@ nav a:visited {
     transition: .3s;
 }
 
+nav a.colored {
+    border-color: var(--accent);
+}
+
 nav a:hover {
     color: var(--accent);
-    border-color: var(--accent);
+    border-color: var(--accent);background-position: center;
+    position: relative;
 }
 
 nav a:last-child {
@@ -518,10 +546,9 @@ select {
 }
 
 select[multiple] {
-    background-image: none /*!important*/;
+    background-image: none;
 }
 
-/* checkbox and radio button style */
 input[type="checkbox"],
 input[type="radio"] {
     vertical-align: bottom;
@@ -584,17 +611,16 @@ textarea {
 input[type="checkbox"],
 input[type="radio"] {
     width: auto;
+    margin: 0.4rem;
 }
 
-/* do not show border around file selector button */
 input[type="file"] {
     border: 0;
     background-color: #86868623;
 }
 
-/* Misc body elements */
 hr {
-    color: var(--border);
+    color: var(--text);
     border-right: 20rem solid;
     margin: 1rem auto;
 }
@@ -643,7 +669,7 @@ figcaption {
 }
 
 blockquote {
-    margin: 2rem 0 2rem 2rem;
+    margin: 0rem 0 0rem 0rem;
     padding: 0.4rem 0.8rem;
     border-left: 0.35rem solid var(--accent);
     color: var(--text-light);
@@ -652,8 +678,12 @@ blockquote {
 
 cite {
     font-size: 0.9rem;
-    color: var(--text-light);
     font-style: normal;
+}
+
+blockquote p, blockquote cite {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 /* Use mono font for code elements */

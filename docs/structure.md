@@ -1,4 +1,35 @@
 # Example structure
+## Cards
+
+### Simplified example
+```css
+- div.cards
+    - div.card
+        - img
+        - h4
+        - p
+        - a
+    - ...
+```
+
+### Actual example code
+```html
+<div class="cards">
+    <div class="card" onclick="window.location.href = 'blog/log4shell';">
+        <img src="image.jpg">
+        <h4>Log4Shell Info</h4>
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href="#">Learn more...</a>
+    </div>
+    <div class="card" onclick="window.location.href = 'blog/example';">
+        <img src="image.jpg">
+        <h4>Example text</h4>
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href="#">Learn more...</a>
+    </div>
+</div>
+```
+
 ## Rows
 ```html
 <div class="row">
@@ -25,7 +56,7 @@
 
 
 ## Blog
-(heavily simplified, of course)
+### Simplified example
 ```css
 - body
     - header
@@ -45,8 +76,27 @@
         - socials
 ```
 
-### Info Box (Small)
+## Info Box (Simple)
+```html
+<div class="text-box article-info">
+    <p>
+        by <strong>ONLIX</strong>・ <strong>Mar 14, 2022</strong>
+    </p>
+</div>
+```
+
 ![Info Box (Small)](media/infobox-small.png)
 
-### Info Box (Large )
+## Info Box (Detailed)
+
+```html
+<div class="text-box article-info">
+    <p class="author">ONLIX</p>
+    <p class="published">Mar 14, 2022</p>
+    <p class="reading-time">5</p>
+</div>
+```
+
+The emojis & text will be added automatically. If you don't like how it looks, just use your custom `<p>` elements without the classes.
+
 ![Info Box (Large)](media/infobox-large.png)
