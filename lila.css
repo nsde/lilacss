@@ -6,7 +6,8 @@
 
     /* Default (light) theme */
     --bg: #fff;
-    --accent-bg: #F3E8FF;
+    --accent-bg: #f6f6f6;
+    --darker-bg: #b9b9b96c;
     --text: #111111;
     --text-light: #585858;
     --border: #00000000;
@@ -35,6 +36,7 @@ body>header {
     :root {
         --bg: #181927;
         --accent-bg: #c6b4ff13;
+        --darker-bg: #00000018;
         --text: #dcdcdc;
         --text-light: #ffffffd8;
         --border: #ffffff00;
@@ -51,7 +53,7 @@ body>header {
     }
 
     body>header.text-shadow {
-        text-shadow: 0px 0px 400px #00000000, 0px 0px 20px #000000, 0px 0px 20px #000000, 0px 0px 50px #000000, 0px 0px 25px #000000, 0px 0px 50px #000000, 0px 0px 25px #000000;
+        text-shadow: 0px 0px 20px #000000a6, 0px 0px 20px #000000c5, 0px 0px 50px #000000b6, 0px 0px 25px #000000c7, 0px 0px 50px #000000, 0px 0px 25px #000000;
     }
 
     .dark-invert {
@@ -67,7 +69,7 @@ body>header {
 
 nav a {
     filter: brightness(1.2);
-    background-color: var(--accent-bg);
+    background-color: var(--darker-bg);
 }
 
 html {
@@ -266,6 +268,7 @@ div.card a {
 }
 
 div.text-box {
+    margin: 1rem;
     background-color: var(--accent-bg);
     border-radius: 5px;
     padding: 1rem;
@@ -354,16 +357,6 @@ abbr {
     cursor: help;
 }
 
-/* div:hover {
-    opacity: 90%;
-    transition: .5s;
-} */
-
-div {
-    opacity: 100%;
-    transition: .5s;
-}
-
 .fade-away:hover {
     opacity: 0%;
     transition: 1s;
@@ -384,7 +377,6 @@ input[type="button"]:enabled:hover {
     cursor: pointer;
 }
 
-/* Format navigation */
 nav {
     font-size: 1rem;
     line-height: 2;
@@ -404,26 +396,26 @@ nav ol {
     padding: 0;
 }
 
-/* List items are inline elements, make them behave more like blocks */
-nav ul li,
-nav ol li {
+nav ul li {
     display: inline-block;
-}
-
-nav a.current {
-    opacity: 50%;
 }
 
 nav a,
 nav a:visited {
-    margin: 0 1rem 1rem 0;
+    color: var(--text);
     border: 1px solid var(--border);
     border-radius: 5px;
-    color: var(--text);
-    display: inline-block;
+    
+    margin: 0 1rem 1rem 0;
     padding: 0.1rem 1rem;
+    display: inline-block;
     text-decoration: none;
+    
     transition: .3s;
+}
+
+nav a.current {
+    color: var(--accent);
 }
 
 nav a.colored {
@@ -432,24 +424,13 @@ nav a.colored {
 
 nav a:hover {
     color: var(--accent);
-    border-color: var(--accent);background-position: center;
+    border-color: var(--accent);
     position: relative;
 }
 
 nav a:last-child {
     margin-right: 0;
 }
-
-/* Reduce nav side on mobile */
-/* @media only screen and (max-width: 750px) {
-    nav a {
-        border: none;
-        padding: 0;
-        color: var(--accent);
-        text-decoration: underline;
-        line-height: 1;
-    }
-} */
 
 /* Format the expanding box */
 details {
@@ -720,4 +701,12 @@ pre code {
     background: none;
     margin: 0;
     padding: 0;
+}
+
+button.to-top {
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    border-radius: 0px;
+    padding: .7rem;
+    margin: .5rem;
+    float: right;
 }

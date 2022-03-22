@@ -19,7 +19,7 @@
                         <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
                     </svg>GitHub</a>
                 
-                    <a href="#" class="colored" style="float: right;">Sign up</a>                    
+                    <a href="#" style="float: right;">Sign up</a>                    
                 </nav>
                 
                 <h1>🌷 LilaCSS Demo</h1>
@@ -32,10 +32,12 @@
                 <h2>Basic Typography</h2>
                 <div class="text-box article-info">
                     <p>by <strong>ONLIX</strong>・<strong>Mar 14, 2022</strong></p>
-                    <!-- <p class="author">ONLIX</p>
-                        <p class="published">Mar 14, 2022</p>
-                        <p class="reading-time">5</p> -->
-                    </div>
+                </div>
+                <div class="text-box article-info">
+                    <p class="author">ONLIX</p>
+                    <p class="published">Mar 14, 2022</p>
+                    <p class="reading-time">5</p>
+                </div>
                     <hr>
                     <p>This page is a demonstration of the elements that can be formatted using LilaCSS. Each section includes a
                         code
@@ -62,22 +64,16 @@
                         
                         <p>The heading elements also have an increased top margin in order to break blocks of text up better.</p>
                         
-                        <h1>Heading 1 <code>3rem</code></h1>
-                        
-                        <h2>Heading 2 <code>2.6rem</code></h2>
-                        
-                        <h3>Heading 3 <code>2rem</code></h3>
-                        
+        <h1>Heading 1 <code>3rem</code></h1>
+        <h2>Heading 2 <code>2.6rem</code></h2>
+        <h3>Heading 3 <code>2rem</code></h3>
         <h4>Heading 4 <code>1.44rem</code></h4>
-
         <h5>Heading 5 <code>1.15rem</code></h5>
-
         <h6>Heading 6 <code>0.96rem</code></h6>
         
         <h3>Links &amp; Buttons</h3>
         
         <timeline>
-            
         </timeline>
 
         <p>Links are formatted very simply on LilaCSS (shock horror). They use the <code
@@ -339,19 +335,19 @@ while True:
             <div class="card" onclick="window.location.href = 'http://www.example.com';">
                 <img src="https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg">
                 <h4>This is an example article</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et hello this is just a placeholder text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et.</p>
                 <a href="#">Learn more...</a>
             </div>
             <div class="card" onclick="window.location.href = 'http://www.example.com';">
                 <img src="https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg">
                 <h4>This is an example article</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et hello this is just a placeholder text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et.</p>
                 <a href="#">Learn more...</a>
             </div>
             <div class="card" onclick="window.location.href = 'http://www.example.com';">
                 <img src="https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg">
                 <h4>This is an example article</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et hello this is just a placeholder text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et.</p>
                 <a href="#">Learn more...</a>
             </div>
         </div>
@@ -359,6 +355,7 @@ while True:
     </main>
 
     <footer>
+        <button class="to-top" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"></button>
         <p>LilaCSS was created by <a href="https://onlix.me">ONLIX</a> and is licensed under the MIT license.</p>
     </footer>
 
