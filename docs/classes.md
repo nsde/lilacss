@@ -31,3 +31,10 @@ Shows the original image, because dark mode is off.
 Dark theme with `dark-invert`
 ![](media/dark-invert.png)
 Show the inverted image, because dark mode is on.
+
+## Hover Inversion
+Inverts the color of the element when hovered. Quite simple.
+
+```html
+<img class="hover-invert" src="image.jpg">
+```

@@ -12,9 +12,10 @@
     --text-light: #585858;
     --border: #00000000;
     --accent: #A855F7;
+    --accent-light: #e770d777;
     --code: #9333EA;
     --preformatted: #444;
-    --marked: #cc9fff98;
+    --marked: #cd85fdce;
     --disabled: #efefef;
 }
 
@@ -41,9 +42,10 @@ body>header {
         --text-light: #ffffffd8;
         --border: #ffffff00;
         --accent: #e770d7;
+        --accent-light: #e770d777;
         --code: #f062b5;
         --preformatted: #ccc;
-        --marked: #ff9efab0;
+        --marked: #ff8cf9a1;
         --disabled: #111;
     }
 
@@ -132,6 +134,15 @@ body>footer {
     border-top: 1px solid var(--text-light);
 }
 
+.hover-invert:hover {
+    filter: invert(1);
+    transition: 1s;
+}
+
+.hover-invert {
+    transition: 1s;
+}
+
 div.row {
     display: flex;
     width: 100%;
@@ -145,32 +156,37 @@ div.input-box input {
     width: 80%;
 }
 
+@media only screen and (min-width: 580px) {
+    div.input-box input {
+        width: 70%;
+    } 
+}
+
 .progress {
-    margin: 50px auto;
-    width: 100%;
+    margin: 1rem auto;
     max-width: 500px;
     background-color: var(--accent-bg);
     border-radius: 5px;
 }
-  
+
+@keyframes bar-fill {
+    from {width: 0%;}
+    to {width: var(--percentage);}
+}
+
 .progress .bar {
     height: 100%;
-    width: 50%;
-    background-color: var(--code);
+    width: var(--percentage);
+    --percentage: 70%;
+    animation: bar-fill 1s ;
+    background: linear-gradient(90deg, rgb(235, 72, 227) 0%, rgb(246, 108, 239) 50%, rgba(235, 27, 224, 0.753) 100%); 
     border-radius: 5px;
 }
 
 .progress p {
     color: white;
     padding-left: .5rem;
-    font-weight: bold;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.829);
-}
-
-@media only screen and (min-width: 580px) {
-    div.input-box input {
-        width: 70%;
-    } 
 }
 
 .w-10           {width: 10%};
@@ -301,11 +317,15 @@ p.author::before {
     content: "✍️ Written by ";
 }
 
+p.author::after {
+    color: red !important;
+}
+
 /* Format links & buttons */
 a,
 a:visited {
     color: var(--accent);
-
+    
 }
 
 a:hover {
@@ -607,15 +627,10 @@ hr {
 }
 
 mark {
+    color: var(--font);
     padding: 2px 5px;
     border-radius: 4px;
     background: var(--marked);
-}
-
-mark:hover {
-    color: var(--font);
-    background-color: var(--bg);
-    transition: 1s;
 }
 
 main img,
@@ -703,10 +718,26 @@ pre code {
     padding: 0;
 }
 
+pre:before {
+    counter-increment: line;
+    counter-reset: line;
+    content: counter(line);
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    padding: 0 .5em;
+    margin-right: .5em;
+    color: #888
+}
+
 button.to-top {
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
     border-radius: 0px;
     padding: .7rem;
     margin: .5rem;
     float: right;
+}
+
+*::selection {
+    color: var(--text) !important;
+    background-color: var(--marked) !important;
 }

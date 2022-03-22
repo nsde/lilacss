@@ -13,6 +13,8 @@ The aim of LilaCSS is to provide a CSS framework in which classes are completely
 - Responsive
 - Lightweight
 - No `!important`, you decide
+  - Exceptions:
+    - `*::selection`, basically just the highlighting color of a text field when holding down & moving the cursor, nothing too important
 
 ### Advantages over Simple.css
 - More modern style
