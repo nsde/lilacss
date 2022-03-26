@@ -35,13 +35,13 @@ The aim of LilaCSS is to provide a CSS framework in which classes are completely
 Don't worry, the framework won't change that much that I'll break your website.
 
 ```html
-<link href="https://onlix.me/cdn/lilacss" rel="stylesheet">
+<link href="https://onlix.me/lila.css" rel="stylesheet">
 ```
-
+  
 ### Download
 Run this in your website directory:
 ```sh
-wget -O style.css https://onlix.me/cdn/lilacss
+wget -O style.css https://onlix.me/lila.css
 ```
 
 and insert this:
