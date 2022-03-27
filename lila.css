@@ -19,17 +19,34 @@
     --disabled: #efefef;
 }
 
+/* —————————————————————————————————— */
+/*              THEMES                */
+
+.midnight {
+    --bg: #000000;
+    --accent-bg: #86868613;
+    --darker-bg: #00000018;
+    --text: #ffffff;
+    --text-light: #ffffffd8;
+    --border: #ffffff00;
+    --accent: #7c70e7;
+    --accent-light: #7270e777;
+    --code: #6b62f0;
+    --preformatted: #ccc;
+    --marked: #978cffa1;
+    --disabled: #111;
+}
+
+/* —————————————————————————————————— */
+
 .light-invert {
     filter: invert(1) hue-rotate(180deg);
 }
 
-body>header.text-shadow {
-    text-shadow: 0px 0px 250px #ffffff, 0px 0px 50px #ffffff, 0px 0px 50px #ffffff;
-}
-
-body>header {
-    opacity: 1.0;
-    background-image: var(--image);
+@media (prefers-color-scheme: light) {
+    body>header.text-shadow {
+        text-shadow: 0px 0px 250px #ffffff, 0px 0px 50px #ffffff, 0px 0px 50px #ffffff;
+    }
 }
 
 /* Dark theme */
@@ -48,7 +65,7 @@ body>header {
         --marked: #ff8cf9a1;
         --disabled: #111;
     }
-
+    
     img,
     video {
         opacity: 0.9;
@@ -57,12 +74,12 @@ body>header {
     body>header.text-shadow {
         text-shadow: 0px 0px 20px #000000a6, 0px 0px 20px #000000c5, 0px 0px 50px #000000b6, 0px 0px 25px #000000c7, 0px 0px 50px #000000, 0px 0px 25px #000000;
     }
-
+    
     .dark-invert {
         filter: invert(1) hue-rotate(180deg);
         box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 50px 50px 0 rgba(255, 255, 255, 0.308);
     }
-
+    
     .light-invert {
         filter: none;
         box-shadow: none;
@@ -88,12 +105,17 @@ body {
     line-height: 1.5;
     display: grid;
     grid-template-columns:
-        1fr min(45rem, 90%) 1fr;
+    1fr min(45rem, 90%) 1fr;
     margin: 0;
 }
 
 body>* {
     grid-column: 2;
+}
+
+body>header {
+    opacity: 1.0;
+    background-image: var(--image);
 }
 
 /* Make the header bg full width, but the content inline with body */
@@ -317,8 +339,8 @@ p.author::before {
     content: "✍️ Written by ";
 }
 
-p.author::after {
-    color: red !important;
+p.tags::before {
+    content: "🏷️ Tags: ";
 }
 
 /* Format links & buttons */
