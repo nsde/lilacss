@@ -314,11 +314,6 @@ div.text-box {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-div.text-box:hover {
-    opacity: 0.8;
-    transition: 0.1s;
-}
-
 div.article-info p {
     margin: auto;
 }
