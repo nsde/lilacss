@@ -797,6 +797,35 @@ pre:before {
     color: #888
 }
 
+.posts {
+    display: grid;
+}
+
+.post {
+    /* text-align: center; */
+    margin: 1rem;
+    background-color: var(--accent-bg);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.post img {
+    height: 20%;
+    box-shadow: none;
+}
+
+.post:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+@media only screen and (min-width: 400px)   {.posts {grid-template-columns: auto auto }}
+@media only screen and (min-width: 800px)   {.posts {grid-template-columns: auto auto auto;}}
+@media only screen and (min-width: 1200px)  {.posts {grid-template-columns: auto auto auto auto;}}
+
 button.to-top {
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
     border-radius: 0px;

@@ -31,6 +31,8 @@
 ```
 
 ## Rows
+Not recommended, this is for experimental purposes and testing.
+
 ```html
 <div class="row">
     <p class="w-2">One</p>
@@ -56,7 +58,7 @@
 
 
 ## Blog
-### Simplified example
+### Simplified example (!)
 ```css
 - body
     - header
@@ -106,7 +108,7 @@ Pretty much every single website has them, and your's will, too!
 
 ![](media/articles.png)
 
-These are called "cards" and can be used like so:
+These are called "cards" (mentioned before) and can be used like so:
 
 ```html
 <h2>New articles</h2>
