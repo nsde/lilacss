@@ -100,3 +100,34 @@
 The emojis & text will be added automatically. If you don't like how it looks, just use your custom `<p>` elements without the classes.
 
 ![Info Box (Large)](media/infobox-large.png)
+
+## "Recommended Articles"-Overview
+Pretty much every single website has them, and your's will, too!
+
+![](media/articles.png)
+
+These are called "cards" and can be used like so:
+
+```html
+<h2>New articles</h2>
+<div class="cards">
+    <div class="card" onclick="window.location.href = 'http://www.example.com';">
+        <img src="image.jpg">
+        <h4>This is an example article</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et.</p>
+        <a href="#">Learn more...</a>
+    </div>
+    <div class="card" onclick="window.location.href = 'http://www.example.com';">
+        <img src="image.jpg">
+        <h4>This is an example article</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et.</p>
+        <a href="#">Learn more...</a>
+    </div>
+    <div class="card" onclick="window.location.href = 'http://www.example.com';">
+        <img src="image.jpg">
+        <h4>This is an example article</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et.</p>
+        <a href="#">Learn more...</a>
+    </div>
+</div>
+```

@@ -10,6 +10,28 @@
 ![](media/cover-image.png)
 
 
+## RGB Effect
+### Examples
+You can configure the speed of the effect:
+
+```html
+<img class="rgb-slow" src="image.jpg"> <!-- 10 seconds -->
+<img class="rgb-fast" src="image.jpg"> <!-- 5 seconds -->
+<img class="rgb-faster" src="image.jpg"> <!-- 3 seconds -->
+<img class="rgb-fastest" src="image.jpg"> <!-- 1 second -->
+```
+If `rgb-on-hover` is in the class, the element/image's color will only change once the mouse cursor hovers over the it:
+
+```html
+<img class="rgb-fastest rgb-on-hover" src="image.jpg"> <!-- 1 second + only activates on hover -->
+```
+
+Two screenshots of the same jpg image with the RGB effect enabled:
+
+![](media/rgb-effect.png)
+
+The colors keep changing.
+
 ## Light/Dark Invert for Images
 ```html
 <!-- Invert image if dark mode is enabled -->

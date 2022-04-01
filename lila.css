@@ -200,7 +200,7 @@ div.input-box input {
     height: 100%;
     width: var(--percentage);
     --percentage: 70%;
-    animation: bar-fill 1s ;
+    animation: bar-fill 1s;
     background: linear-gradient(90deg, rgb(235, 72, 227) 0%, rgb(246, 108, 239) 50%, rgba(235, 27, 224, 0.753) 100%); 
     border-radius: 5px;
 }
@@ -297,8 +297,18 @@ div.card:hover, header.a {
     cursor: pointer;
 }
 
+.hover-effect {
+    transition: .5s;
+}
+
+.hover-effect:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
 div.card img {
     width: 90%;
+    align-items: center;
 }
 
 div.card a {
@@ -399,6 +409,48 @@ abbr {
     transition: 1s;
 }
 
+@keyframes rgb-effect {
+    from {filter: hue-rotate(0deg);}
+    to {filter: hue-rotate(360deg);}
+}
+
+.rgb-slow {
+    animation: rgb-effect 10s linear infinite;
+}
+
+.rgb-fast {
+    animation: rgb-effect 5s linear infinite;
+}
+
+.rgb-faster {
+    animation: rgb-effect 3s linear infinite;
+}
+
+.rgb-fastest {
+    animation: rgb-effect 1s linear infinite;
+}
+
+.animate-on-hover {
+    animation-play-state: paused;
+}
+
+.animate-on-hover:hover {
+    animation-play-state: running;
+}
+
+button:focus,
+button:enabled,
+[role="button"],
+[role="button"]:not([aria-disabled="true"]),
+input[type="submit"],
+input[type="submit"]:enabled,
+input[type="reset"],
+input[type="reset"]:enabled,
+input[type="button"],
+input[type="button"]:enabled {
+    transition: .3s;
+}
+
 button:focus,
 button:enabled:hover,
 [role="button"]:focus,
@@ -409,8 +461,7 @@ input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
 input[type="button"]:enabled:hover {
-    filter: brightness(1.2);
-    transition: .3s;
+    filter: brightness(1.4);
     cursor: pointer;
 }
 
