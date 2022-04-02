@@ -17,14 +17,14 @@
     --preformatted: #444;
     --marked: #cd85fdce;
     --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, rgb(235, 72, 227) 0%, rgb(235, 72, 227) 50%, rgba(235, 27, 224, 0.753) 100%)
 }
 
-/* —————————————————————————————————— */
-/*              THEMES                */
+/* ============== THEMES ============ */
 
 .midnight {
-    --bg: #000000;
-    --accent-bg: #86868613;
+    --bg: #0c0c0c;
+    --accent-bg: #5c5c5c13;
     --darker-bg: #00000018;
     --text: #ffffff;
     --text-light: #ffffffd8;
@@ -35,7 +35,57 @@
     --preformatted: #ccc;
     --marked: #978cffa1;
     --disabled: #111;
+    --gradient-accent: linear-gradient(90deg, #6b62f0 0%, #7270e7 50%, #7c70e7 100%)
 }
+
+.amoled {
+    --bg: #000000;
+    --accent-bg: #5c5c5c13;
+    --darker-bg: #00000018;
+    --text: #ffffff;
+    --text-light: #ffffffd8;
+    --border: #ffffff00;
+    --accent: #7c70e7;
+    --accent-light: #7270e777;
+    --code: #6b62f0;
+    --preformatted: #ccc;
+    --marked: #978cffa1;
+    --disabled: #111;
+    --gradient-accent: linear-gradient(90deg, #6b62f0 0%, #7270e7 50%, #7c70e7 100%)
+}
+
+.ocean {
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #2598f6;
+    --accent-light: #70c1e777;
+    --code: #0f86e7;
+    --preformatted: #444;
+    --marked: #85cdfdce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #2598f6 0%, #2598f6 50%, #85cdfdce 100%)
+}
+
+.fiery {
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #f62536;
+    --accent-light: #e7708e77;
+    --code: #e70f50;
+    --preformatted: #444;
+    --marked: #fd85adce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #f62536 0%, #e70f50 50%, #fd85adce 100%)
+}
+
 
 /* —————————————————————————————————— */
 
@@ -58,7 +108,7 @@
         --text: #dcdcdc;
         --text-light: #ffffffd8;
         --border: #ffffff00;
-        --accent: #e770d7;
+        --accent: #ee75de;
         --accent-light: #e770d777;
         --code: #f062b5;
         --preformatted: #ccc;
@@ -86,10 +136,19 @@
     }
 }
 
-nav a {
-    filter: brightness(1.2);
-    background-color: var(--darker-bg);
+.only {
+    display: none;
 }
+
+@media (prefers-color-scheme: light) {.only.light {display: inherit;}}
+@media (prefers-color-scheme: dark) {.only.dark {display: inherit;}}
+
+@media (orientation: landscape) {.only.horizontal {display: inherit;}}
+@media (orientation: portrait) {.only.vertical {display: inherit;}}
+
+@media (scripting: initial-only) {.only.js-init {display: inherit;}}
+@media (scripting: enabled) {.only.js-on {display: inherit;}}
+@media (scripting: none) {.only.js-off {display: inherit;}}
 
 html {
     /* Set the font globally */
@@ -113,14 +172,15 @@ body>* {
     grid-column: 2;
 }
 
-body>header {
-    opacity: 1.0;
-    background-image: var(--image);
+body>header .dark {
+    color: var(--);
 }
 
 /* Make the header bg full width, but the content inline with body */
 body>header {
     /* background: var(--accent-bg); */
+    opacity: 1.0;
+    background-image: var(--image);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -201,7 +261,7 @@ div.input-box input {
     width: var(--percentage);
     --percentage: 70%;
     animation: bar-fill 1s;
-    background: linear-gradient(90deg, rgb(235, 72, 227) 0%, rgb(246, 108, 239) 50%, rgba(235, 27, 224, 0.753) 100%); 
+    background: var(--gradient-accent); 
     border-radius: 5px;
 }
 
@@ -349,10 +409,9 @@ p.tags::before {
 }
 
 /* Format links & buttons */
-a,
-a:visited {
+main a,
+main a:visited {
     color: var(--accent);
-    
 }
 
 a:hover {
@@ -414,6 +473,14 @@ abbr {
     to {filter: hue-rotate(360deg);}
 }
 
+.rgb-slowest {
+    animation: rgb-effect 60s linear infinite;
+}
+
+.rgb-slower {
+    animation: rgb-effect 20s linear infinite;
+}
+
 .rgb-slow {
     animation: rgb-effect 10s linear infinite;
 }
@@ -471,6 +538,10 @@ nav {
     padding: 1rem 0 0 0;
 }
 
+nav.stay-left {
+    position: fixed;
+}
+
 /* Use flexbox to allow items to wrap, as needed */
 nav ul,
 nav ol {
@@ -490,7 +561,7 @@ nav ul li {
 
 nav a,
 nav a:visited {
-    color: var(--text);
+    /* background-color: var(--bg); */
     border: 1px solid var(--border);
     border-radius: 5px;
     
@@ -503,7 +574,7 @@ nav a:visited {
 }
 
 nav a.current {
-    color: var(--accent);
+    border-bottom: var(--accent) solid;
 }
 
 nav a.colored {
@@ -516,8 +587,28 @@ nav a:hover {
     position: relative;
 }
 
+nav a.right {
+    color: var(--accent);
+}
+
+header.dark, nav a, nav a.current {
+    color: white;
+}
+
+@media only screen and (min-width: 500px) {
+    nav a.right {
+        float: right;
+    }
+}
+
 nav a:last-child {
     margin-right: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    nav a {
+        margin: 0;
+    }
 }
 
 /* Format the expanding box */
@@ -802,13 +893,13 @@ pre:before {
 }
 
 .post {
+    /* grid-row: 3; */
     /* text-align: center; */
-    margin: 1rem;
+    margin: 0.5rem;
     background-color: var(--accent-bg);
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .post img {
@@ -822,16 +913,22 @@ pre:before {
     transition: 1s;
 }
 
-@media only screen and (min-width: 400px)   {.posts {grid-template-columns: auto auto }}
+@media only screen and (min-width: 300px)   {.posts {grid-template-columns: auto }}
+@media only screen and (min-width: 450px)   {.posts {grid-template-columns: auto auto }}
 @media only screen and (min-width: 800px)   {.posts {grid-template-columns: auto auto auto;}}
 @media only screen and (min-width: 1200px)  {.posts {grid-template-columns: auto auto auto auto;}}
 
 button.to-top {
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    border-radius: 0px;
+    /* border-radius: 0px; */
+    color: var(--accent);
+    background-color: var(--accent-bg);
     padding: .7rem;
     margin: .5rem;
     float: right;
+}
+
+button.to-top.icon {
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
 }
 
 *::selection {

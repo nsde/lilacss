@@ -9,12 +9,39 @@
 ### Result
 ![](media/cover-image.png)
 
+## Navbar
+
+The normal navbar:
+
+```html
+```html
+<nav>
+    ...
+</nav>
+```
+
+will result in something like this:
+
+![](media/navbar-normal.png)
+
+While...
+```html
+<nav class="stay-left">
+    ...
+</nav>
+```
+...will look like this:
+
+![](media/navbar-stay-left.png)
 
 ## RGB Effect
 ### Examples
 You can configure the speed of the effect:
 
 ```html
+<img class="rgb-slowest" src="image.jpg"> <!-- 60 seconds -->
+
+<img class="rgb-slower" src="image.jpg"> <!-- 20 seconds -->
 <img class="rgb-slow" src="image.jpg"> <!-- 10 seconds -->
 <img class="rgb-fast" src="image.jpg"> <!-- 5 seconds -->
 <img class="rgb-faster" src="image.jpg"> <!-- 3 seconds -->

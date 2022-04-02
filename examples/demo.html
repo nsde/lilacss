@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css">
 </head>
 
-<body class="">
-    <header class="text-shadow"
-        style="--image: url('https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg')">
-        <nav>
-            <a href="" class="current">Demo</a>
-            <a href="chat.html">Chat</a>
+<body class="midnight">
+    <header class="dark" style="--image: url('/home/lix/Documents/NSDEpop/lilacss/examples/bg.png')">
+        <nav class="">
+            <a href="#header" class="current"><i class="bi bi-house"></i> Demo</a>
+            <a href="#chat"><i class="bi bi-chat"></i> Chat</a>
             <a href="https://github.com/nsde/lilacss">
                 <svg class="icon" viewBox="0 0 32 32">
                     <path
@@ -24,34 +23,72 @@
                     </path>
                 </svg>GitHub</a>
 
-            <a href="#" style="float: right;">Sign up</a>
+            <a href="#" class="right"><i class="bi bi-person"></i> Sign up</a>
         </nav>
-
-        <h1>🌷 LilaCSS Demo</h1>
+        <br><br>
+        <h1 id="header">🌷 LilaCSS Demo</h1>
         <p>A showcase of LilaCSS formatting in action and how to use it.</p>
     </header>
 
     <main>
+        <p class="only dark">Dark mode detected</p>
+        <p class="only light">Light mode detected</p>
+
+        <p class="only vertical">Vertical orientation detected</p>
+        <p class="only horizontal">Horizontal orientation detected</p>
+        
+        <p class="only js-init">Java Script is on, but only on page load</p>
+        <p class="only js-on">Java Script is enabled</p>
+        <p class="only js-off">Java Script is disabled</p>
+
         <div class="posts">
-    
             <div class="post">
-                <img src="https://onlix.me/logo.png">
+                <img src="image.jpg">
                 <h4>Should YOU learn Python?</h4>
                 <p>This is just an example. What are the benefits of learning Python?</p>
             </div>
             
             <div class="post">
-                <img src="https://onlix.me/logo.png">
+                <img src="image.jpg">
                 <h4>Resources for programmers</h4>
                 <p>Your programming guide - resources that might become handy when (learning) programming. </p>
             </div>
             
             <div class="post">
-                <img src="https://onlix.me/logo.png">
+                <img src="image.jpg">
                 <h4>ONLIX' Hardware Guide</h4>
                 <p>Your hardware guide - everything you need to know before buying a PC('s parts)</p>
             </div>
+    
+            <div class="post">
+                <img src="image.jpg">
+                <h4>Should YOU learn Python?</h4>
+                <p>This is just an example. What are the benefits of learning Python?</p>
+            </div>
             
+            <div class="post">
+                <img src="image.jpg">
+                <h4>Resources for programmers</h4>
+                <p>Your programming guide - resources that might become handy when (learning) programming. </p>
+            </div>
+            
+            <div class="post">
+                <img src="image.jpg">
+                <h4>ONLIX' Hardware Guide</h4>
+                <p>Your hardware guide - everything you need to know before buying a PC('s parts)</p>
+            </div>
+
+            <div class="post">
+                <img src="image.jpg">
+                <h4>ONLIX' Hardware Guide</h4>
+                <p>Your hardware guide - everything you need to know before buying a PC('s parts)</p>
+            </div>
+
+            <div class="post">
+                <img src="image.jpg">
+                <h4>ONLIX' Hardware Guide</h4>
+                <p>Your hardware guide - everything you need to know before buying a PC('s parts)</p>
+            </div>               
         </div>
 
         <h2>Basic Typography</h2>
@@ -385,12 +422,15 @@ while True:
                 <p>Lorem ipsum dolor sit amet, consectetur adipis lac consetetur sad et.</p>
                 <a href="#">Learn more...</a>
             </div>
+        
         </div>
-
+        
+        <p id="chat">(there is actually no chat whatsoever, it's just a demo!)</p>
     </main>
 
     <footer>
-        <button class="to-top" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"></button>
+        <!-- <button class="to-top" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"></button> -->
+        <button class="to-top" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><i class="bi bi-arrow-up"></i></button>
         <p>LilaCSS was created by <a href="https://onlix.me">ONLIX</a> and is licensed under the MIT license.</p>
     </footer>
 

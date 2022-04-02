@@ -64,6 +64,8 @@ clear && echo "Done! Showing LilaCSS demo in Firefox" # info message
 
 ## FAQ
 ### How can I use icons?
+I decided not to add my own icons because first of all, I'm not a professional when it comes like this, and I'd take weeks for a acceptable amount of icons, which I think wouldn't be worth it considering there are already tons of great icon frameworks out there: 
+
 Add the stylesheet to your html:
 
 ```html
