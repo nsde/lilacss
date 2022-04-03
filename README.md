@@ -1,4 +1,5 @@
-# 🌷 LilaCSS – Simply useful & modern.
+# 🌷 LilaCSS – Simply useful & modern. 
+### [LIVE DEMO](https://lilacss.netlify.app) - No setup needed + automatically updated!
 The aim of LilaCSS is to provide a CSS framework in which classes are completely optional. The website should work fine without them, too! No need to research how to insert a button. Just add one line (see below) to your code and *et voilà*!
 
 <!-- ![Image](https://i.ibb.co/CwKV5Pv/drawing.png) -->

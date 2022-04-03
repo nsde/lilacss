@@ -24,19 +24,22 @@
         <h1 id="header" class="theme-display">LilaCSS: </h1>
         <p>Please note that LilaCSS is a WIP and themes may change a bit.</p>
 
-        <button onclick="document.getElementById('webpage').className = 'light';">Light</button>
-        <button onclick="document.getElementById('webpage').className = 'dark';">Dark</button>
-        <button onclick="document.getElementById('webpage').className = 'midnight';">Midnight</button>
-        <button onclick="document.getElementById('webpage').className = 'amoled';">AMOLED</button>
-        <button onclick="document.getElementById('webpage').className = 'ocean';">Ocean</button>
-        <button onclick="document.getElementById('webpage').className = 'fiery';">Fiery</button>
-        <button onclick="document.getElementById('webpage').className = 'fresh';">Fresh</button>
-        <button onclick="document.getElementById('webpage').className = 'golden';">Golden</button>
+        <button class="night"           onclick="document.getElementById('webpage').className = 'night';"           >Default (Day)</button>
+        <button class="day"             onclick="document.getElementById('webpage').className = 'day';"             >Default (Night)</button>
         <br>
-        <button onclick="document.getElementById('webpage').className = 'ocean night';">Ocean Night</button>
-        <button onclick="document.getElementById('webpage').className = 'fiery night';">Fiery Night</button>
-        <button onclick="document.getElementById('webpage').className = 'fresh night';">Fresh Night</button>
-        <button onclick="document.getElementById('webpage').className = 'golden night';">Golden Night</button>
+        <button class="midnight"        onclick="document.getElementById('webpage').className = 'midnight';"        >Midnight</button>
+        <button class="amoled"          onclick="document.getElementById('webpage').className = 'amoled';"          >AMOLED</button>
+        <button class="ocean"           onclick="document.getElementById('webpage').className = 'ocean';"           >Ocean</button>
+        <button class="fiery"           onclick="document.getElementById('webpage').className = 'fiery';"           >Fiery</button>
+        <button class="fresh"           onclick="document.getElementById('webpage').className = 'fresh';"           >Fresh</button>
+        <button class="golden"          onclick="document.getElementById('webpage').className = 'golden';"          >Golden</button>
+        <br>
+        <button class="midnight day"    onclick="document.getElementById('webpage').className = 'midnight day';"    >Midnight Day (lol)</button>
+        <button class="amoled day"      onclick="document.getElementById('webpage').className = 'amoled day';"      >AMOLED Day</button>
+        <button class="ocean night"     onclick="document.getElementById('webpage').className = 'ocean night';"     >Ocean Night</button>
+        <button class="fiery"           onclick="document.getElementById('webpage').className = 'fiery night';"     >Fiery Night</button>
+        <button class="fresh night"     onclick="document.getElementById('webpage').className = 'fresh night';"     >Fresh Night</button>
+        <button class="golden night"    onclick="document.getElementById('webpage').className = 'golden night'; "   >Golden Night</button>
     </header>
 
     <main>
@@ -60,62 +63,50 @@
         <p class="only js-on">Java Script is enabled</p>
         <p class="only js-off">Java Script is disabled</p>
 
+        <div class="featured post">
+            <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
+            
+            <div class="content">
+                <h5>Apr 4</h5>
+                <h4>Should YOU learn Python?</h4>
+                    <p>This is just an example. What are the benefits of learning Python?</p>
+                
+                    <div class="actions">
+                        <i class="bi bi-heart-fill active"></i>
+                        <i class="bi bi-bookmark"></i>
+                        <i class="bi bi-flag"></i>
+                        <i class="bi bi-chat-dots"></i>
+                        <i class="bi bi-info"></i>
+                    </div>
+            </div>
+        </div>
+
         <div class="posts">
             <div class="post">
                 <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>Should YOU learn Python?</h4>
-                <p>This is just an example. What are the benefits of learning Python?</p>
+                <div class="content">
+                    <h5>Apr 4</h5>
+                    <h4>Resources for programmers</h4>
+                    <p>Your programming guide - resources that might become handy when (learning) programming. </p>
+                    
+                    <div class="actions">
+                        <i class="bi bi-heart-fill active"></i>
+                        <i class="bi bi-bookmark"></i>
+                        <i class="bi bi-flag"></i>
+                        <i class="bi bi-chat-dots"></i>
+                        <i class="bi bi-info"></i>
+                    </div>
+                </div>
+
+            </div>
             
-                <div class="actions">
-                    <i class="bi bi-heart-fill active"></i>
-                    <i class="bi bi-bookmark"></i>
-                    <i class="bi bi-flag"></i>
-                    <i class="bi bi-chat-dots"></i>
-                    <i class="bi bi-info"></i>
+            <div class="post">
+                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
+                <div class="content">
+                    <h4>Resources for programmers</h4>
+                    <p>Your programming guide - resources that might become handy when (learning) programming. </p>
                 </div>
             </div>
-            
-            <div class="post">
-                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>Resources for programmers</h4>
-                <p>Your programming guide - resources that might become handy when (learning) programming. </p>
-            </div>
-            
-            <div class="post">
-                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>ONLIX' Hardware Guide</h4>
-                <p>Your hardware guide - everything you need to know before buying a PC('s parts)</p>
-            </div>
-    
-            <div class="post">
-                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>Should YOU learn Python?</h4>
-                <p>This is just an example. What are the benefits of learning Python?</p>
-            </div>
-            
-            <div class="post">
-                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>Resources for programmers</h4>
-                <p>Your programming guide - resources that might become handy when (learning) programming. </p>
-            </div>
-            
-            <div class="post">
-                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>ONLIX' Hardware Guide</h4>
-                <p>Your hardware guide - everything you need to know</p>
-            </div>
-
-            <div class="post">
-                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>ONLIX' Hardware Guide</h4>
-                <p>Your hardware guide</p>
-            </div>
-
-            <div class="post">
-                <img src="https://raw.githubusercontent.com/nsde/lilacss/adaaac8e736952724bb775a594dd1d2278f91e16/examples/image.jpg">
-                <h4>ONLIX' Hardware Guide</h4>
-                <p>Your hardware guide - again this is just a test - everything you need to know before buying a PC('s parts)</p>
-            </div>               
         </div>
 
         <h2>Basic Typography</h2>

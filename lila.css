@@ -132,7 +132,7 @@
     --gradient-accent: linear-gradient(90deg, #c0ad41 0%, #c0a300 50%, #e7e57077 100%)
 }
 
-.light {
+.day {
     --bg: #fff;
     --accent-bg: #f6f6f6;
     --darker-bg: #b9b9b96c;
@@ -142,7 +142,7 @@
     --disabled: #efefef;
 }
 
-.amoled.light {
+.amoled.day {
     --text: #000;
 }
     
@@ -233,6 +233,10 @@
 @media (scripting: enabled) {.only.js-on {display: inherit;}}
 @media (scripting: none) {.only.js-off {display: inherit;}}
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     /* Set the font globally */
     font-family: var(--sans-font);
@@ -246,8 +250,7 @@ body {
     font-size: 1.15rem;
     line-height: 1.5;
     display: grid;
-    grid-template-columns:
-    1fr min(45rem, 90%) 1fr;
+    grid-template-columns: 1fr min(45rem, 90%) 1fr;
     margin: 0;
 }
 
@@ -972,24 +975,48 @@ pre:before {
 
 .posts {
     display: grid;
-    grid-gap: 10px;
+    box-sizing: border-box;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     align-items: start;
-    justify-items: center;  
-    flex-wrap: wrap;
 }
 
 .post {
     background-color: var(--accent-bg);
     border-radius: 10px;
-    padding: 1rem;
-    margin: 0.2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.post h5 {
+    margin: 0rem;
+    opacity: 0.6;
+    font-weight: normal;
+}
+
+.post h4 {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.posts .post {
+    height: 100%;
+}
+
+.featured.post {
+    margin-bottom: 2rem;
+}
+
+.post .content {
+    padding: 2rem;
+    margin: 0.2rem;
+    padding-top: 0px;
+}
+
 .post img {
-    height: 20%;
-    max-width: 100%;
+    width: 100%;
+    height: 10rem;
     box-shadow: none;
+    object-fit: cover;
 }
 
 .post:hover {
@@ -997,21 +1024,12 @@ pre:before {
     opacity: 0.8;
 }
 
-@media only screen and (min-width: 300px)   {.posts {grid-template-columns: auto }}
-@media only screen and (min-width: 450px)   {.posts {grid-template-columns: auto auto }}
-@media only screen and (min-width: 800px)   {.posts {grid-template-columns: auto auto auto;}}
-@media only screen and (min-width: 1200px)  {.posts {grid-template-columns: auto auto auto auto;}}
-
-div.posts div.post div.actions {
-    text-align: center;
-}
-
-div.posts div.post div.actions i.bi {
-    font-size: 1.7rem;
+div.actions i.bi {
+    font-size: 1.5rem;
     padding-right: .2rem;
 }
 
-div.posts div.post div.actions i.bi:hover {
+div.post div.actions i.bi:hover {
     opacity: 0.7;
 }
 
