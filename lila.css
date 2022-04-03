@@ -1,5 +1,5 @@
 :root {
-    --theme: "Light";
+    --theme: "Default";
 
     --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
         "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
@@ -173,7 +173,7 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     :root {
-        --theme: "🕶️ Dark";
+        --theme: "Default";
 
         --bg: #181927;
         --accent-bg: #c6b4ff13;
