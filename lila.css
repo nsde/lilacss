@@ -132,6 +132,20 @@
     --gradient-accent: linear-gradient(90deg, #c0ad41 0%, #c0a300 50%, #e7e57077 100%)
 }
 
+.light {
+    --bg: #fff;
+    --accent-bg: #f6f6f6;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #585858;
+    --border: #00000000;
+    --disabled: #efefef;
+}
+
+.amoled.light {
+    --text: #000;
+}
+    
 .night {
     --bg: #181927;
     --accent-bg: #c6b4ff13;
@@ -159,7 +173,7 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     :root {
-        --theme: "Dark";
+        --theme: "🕶️ Dark";
 
         --bg: #181927;
         --accent-bg: #c6b4ff13;

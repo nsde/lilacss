@@ -11,21 +11,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css">
 </head>
 
-<body class="golden night">
+<body class="dark" id="webpage">
     <header class="dark" style="--image: url('/home/lix/Documents/NSDEpop/lilacss/examples/bg.png')">
         <nav class="">
             <a href="#header" class="current"><i class="bi bi-house"></i> Demo</a>
             <a href="#chat"><i class="bi bi-chat"></i> Chat</a>
             <a href="https://github.com/nsde/lilacss"><i class="bi bi-github"></i> GitHub</a>
 
-            <a href="#" class="right"><i class="bi bi-person"></i> Sign up</a>
+            <a href="login.html" class="right"><i class="bi bi-person"></i> Sign up</a>
         </nav>
         <br><br>
         <h1 id="header" class="theme-display">LilaCSS: </h1>
         <p>Please note that LilaCSS is a WIP and themes may change a bit.</p>
+
+        <button onclick="document.getElementById('webpage').className = 'light';">Light</button>
+        <button onclick="document.getElementById('webpage').className = 'dark';">Dark</button>
+        <button onclick="document.getElementById('webpage').className = 'midnight';">Midnight</button>
+        <button onclick="document.getElementById('webpage').className = 'amoled';">AMOLED</button>
+        <button onclick="document.getElementById('webpage').className = 'ocean';">Ocean</button>
+        <button onclick="document.getElementById('webpage').className = 'fiery';">Fiery</button>
+        <button onclick="document.getElementById('webpage').className = 'fresh';">Fresh</button>
+        <button onclick="document.getElementById('webpage').className = 'golden';">Golden</button>
+
     </header>
 
     <main>
+        <p class="">Current: <strong class="theme-display"></strong> <i class="bi bi-palette-fill theme-color"></i></p>
         <p class="midnight">Theme: <strong class="theme-display"></strong> <i class="bi bi-palette-fill theme-color"></i></p>
         <p class="amoled">Theme: <strong class="theme-display"></strong> <i class="bi bi-palette-fill theme-color"></i></p>
         <p class="ocean">Theme: <strong class="theme-display"></strong> <i class="bi bi-palette-fill theme-color"></i></p>
