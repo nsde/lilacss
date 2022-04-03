@@ -1,4 +1,6 @@
 :root {
+    --theme: "Light";
+
     --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
         "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
         "Helvetica Neue", sans-serif;
@@ -23,6 +25,8 @@
 /* ============== THEMES ============ */
 
 .midnight {
+    --theme: "🌙 Midnight";
+
     --bg: #0c0c0c;
     --accent-bg: #5c5c5c13;
     --darker-bg: #00000018;
@@ -39,6 +43,8 @@
 }
 
 .amoled {
+    --theme: "🌑 AMOLED";
+
     --bg: #000000;
     --accent-bg: #5c5c5c13;
     --darker-bg: #00000018;
@@ -55,6 +61,8 @@
 }
 
 .ocean {
+    --theme: "🌊 Ocean";
+
     --bg: #fff;
     --accent-bg: #e2e2e2;
     --darker-bg: #b9b9b96c;
@@ -71,6 +79,8 @@
 }
 
 .fiery {
+    --theme: "🔥 Fiery";
+
     --bg: #fff;
     --accent-bg: #e2e2e2;
     --darker-bg: #b9b9b96c;
@@ -86,6 +96,53 @@
     --gradient-accent: linear-gradient(90deg, #f62536 0%, #e70f50 50%, #fd85adce 100%)
 }
 
+.fresh {
+    --theme: "🍏 Fresh";
+
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #41c06c;
+    --accent-light: #70e7a277;
+    --code: #00c060;
+    --preformatted: #444;
+    --marked: #abfd85ce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #41c06c 0%, #00c060 50%, #70e7a277 100%)
+}
+
+.golden {
+    --theme: "👑 Golden";
+
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #c0ad41;
+    --accent-light: #e7e57077;
+    --code: #c0a300;
+    --preformatted: #444;
+    --marked: #fde185ce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #c0ad41 0%, #c0a300 50%, #e7e57077 100%)
+}
+
+.night {
+    --bg: #181927;
+    --accent-bg: #c6b4ff13;
+    --darker-bg: #00000018;
+    --text: #dcdcdc;
+    --text-light: #ffffffd8;
+    --border: #ffffff00;
+    --preformatted: #ccc;
+    --disabled: #111;
+
+}
 
 /* —————————————————————————————————— */
 
@@ -102,6 +159,8 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     :root {
+        --theme: "Dark";
+
         --bg: #181927;
         --accent-bg: #c6b4ff13;
         --darker-bg: #00000018;
@@ -134,6 +193,16 @@
         filter: none;
         box-shadow: none;
     }
+}
+
+.theme-display::after {
+    content: var(--theme);
+}
+    
+.theme-color {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .only {
@@ -409,8 +478,8 @@ p.tags::before {
 }
 
 /* Format links & buttons */
-main a,
-main a:visited {
+main a, footer a,
+main a:visited, footer a:visited {
     color: var(--accent);
 }
 
@@ -418,6 +487,10 @@ a:hover {
     /* text-decoration: none; */
     opacity: 80%;
     transition: .5s;
+}
+
+textarea:hover, input:hover, select:hover {
+    opacity: 0.9;
 }
 
 button,
@@ -461,11 +534,6 @@ input[type="range"] {
 /* Set the cursor to '?' while hovering over an abbreviation */
 abbr {
     cursor: help;
-}
-
-.fade-away:hover {
-    opacity: 0%;
-    transition: 1s;
 }
 
 @keyframes rgb-effect {
@@ -921,13 +989,12 @@ pre:before {
 @media only screen and (min-width: 1200px)  {.posts {grid-template-columns: auto auto auto auto;}}
 
 div.posts div.post div.actions {
-    border-top: 1px solid var(--text-light);
-    padding-top: 0.9rem;
     text-align: center;
 }
 
 div.posts div.post div.actions i.bi {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    padding-right: .2rem;
 }
 
 div.posts div.post div.actions i.bi:hover {
@@ -949,6 +1016,10 @@ button.to-top {
 
 button.to-top.icon {
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+*:focus{
+    outline: none;
 }
 
 *::selection {

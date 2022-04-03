@@ -1,4 +1,6 @@
-# Example structure
+# Example structures
+> **Notice:** The framework is under construction and the screenshot might not be 100% accurate! Most of the screenshots are done shortly after the programming of the feature. The screenshots usually show the default dark theme. 
+
 ## Cards
 
 ### Simplified example
@@ -133,3 +135,24 @@ These are called "cards" (mentioned before) and can be used like so:
     </div>
 </div>
 ```
+
+## Posts & Action Bars
+> **Notice:** [Bootstrap Icons](https://icons.getbootstrap.com/#cdn) is needed for the icons to render properly!
+
+```html
+<div class="posts">
+    <div class="post">
+        <img src="image.jpg">
+        <h4>Should YOU learn Python?</h4>
+        <p>This is just an example. What are the benefits of learning Python?</p>
+    
+        <div class="actions">
+            <i class="bi bi-heart-fill active"></i> <!-- for when the user already clicked on the heart (keep in mind to use -fill and active) -->
+            <i class="bi bi-bookmark"></i>
+            <i class="bi bi-flag"></i>
+            <i class="bi bi-chat-dots"></i>
+            <i class="bi bi-info"></i>
+        </div>
+    </div>
+```
+![](media/post.png)
