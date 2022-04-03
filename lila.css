@@ -890,33 +890,53 @@ pre:before {
 
 .posts {
     display: grid;
+    grid-gap: 10px;
+    align-items: start;
+    justify-items: center;  
+    flex-wrap: wrap;
 }
 
 .post {
-    /* grid-row: 3; */
-    /* text-align: center; */
-    margin: 0.5rem;
     background-color: var(--accent-bg);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 1rem;
+    margin: 0.2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .post img {
     height: 20%;
+    max-width: 100%;
     box-shadow: none;
 }
 
 .post:hover {
     cursor: pointer;
     opacity: 0.8;
-    transition: 1s;
 }
 
 @media only screen and (min-width: 300px)   {.posts {grid-template-columns: auto }}
 @media only screen and (min-width: 450px)   {.posts {grid-template-columns: auto auto }}
 @media only screen and (min-width: 800px)   {.posts {grid-template-columns: auto auto auto;}}
 @media only screen and (min-width: 1200px)  {.posts {grid-template-columns: auto auto auto auto;}}
+
+div.posts div.post div.actions {
+    border-top: 1px solid var(--text-light);
+    padding-top: 0.9rem;
+    text-align: center;
+}
+
+div.posts div.post div.actions i.bi {
+    font-size: 1.5rem;
+}
+
+div.posts div.post div.actions i.bi:hover {
+    opacity: 0.7;
+}
+
+i.bi.active {
+    color: var(--accent);
+}
 
 button.to-top {
     /* border-radius: 0px; */
