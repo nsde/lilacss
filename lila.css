@@ -8,8 +8,8 @@
 
     /* Default (light) theme */
     --bg: #fff;
-    --accent-bg: #f6f6f6;
-    --darker-bg: #b9b9b96c;
+    --accent-bg: #c6a0d723;
+    --darker-bg: #ffffff6c;
     --text: #111111;
     --text-light: #585858;
     --border: #00000000;
@@ -258,15 +258,16 @@ body>* {
     grid-column: 2;
 }
 
+/* ================ HEADER ================ */
+
 body>header .dark {
-    color: var(--);
 }
 
 /* Make the header bg full width, but the content inline with body */
 body>header {
     /* background: var(--accent-bg); */
     opacity: 1.0;
-    background-image: var(--image);
+    /* background-image: var(--image); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -288,6 +289,36 @@ body>header p {
     max-width: 40rem;
     margin: 1rem auto;
 }
+
+/* ================ COVER ================ */
+
+body>header {
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+}
+
+body>header::before {    
+    content: "";
+    background-image: var(--image);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+body>header.transparent-cover::before {
+    opacity: 0.2;
+}
+
+body>header * {
+    position: relative;
+}
+
+/* ================ MAIN ================ */
+
 
 main {
     padding-top: 1.5rem;
@@ -973,6 +1004,9 @@ pre:before {
     color: #888
 }
 
+
+/* ================ POSTS ================ */
+
 .posts {
     display: grid;
     box-sizing: border-box;
@@ -1036,6 +1070,43 @@ div.post div.actions i.bi:hover {
 i.bi.active {
     color: var(--accent);
 }
+
+
+/* ================ USER ================ */
+
+.user-popup {
+    margin: 1rem;
+    position: relative;
+    background-color: var(--accent-bg);
+    border-radius: 5px;
+    padding: 2rem;    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.user-popup h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.user-popup form {
+    align-items: center;
+}
+
+.user-popup form .field {
+}
+
+.input[required]::after {
+    content: "*";
+}
+
+i#toggle-password {
+    cursor: pointer;
+    font-size: 1.6rem;
+    right: 1rem;
+    left: -5px;
+}
+
+/* ================ FOOTER ================ */
 
 button.to-top {
     /* border-radius: 0px; */
