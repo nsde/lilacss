@@ -21,21 +21,22 @@ The aim of LilaCSS is to provide a CSS framework in which classes are completely
 > **If this wasn't obvious:** LilaCSS isn't perfect. It has some flaws. All of the following frameworks can actually be great, depending on your use case. And I don't think e.g. Bootstrap is a bad framework just because it doesn't meet a lot of criteria. I just highlighted some of the coolest aspects of LilaCSS!
 
 ### Table
+(Somewhat opinion-based)
 
  Criteria                                                                                               | **LilaCSS**        | **SimpleCSS**      | **Bootstrap**      | **Milligram**      
 ----------------------------------------------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------
- Pretty easy to use (also looks good without classes)                                               | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
- Integrated Auto Dark-Mode                                                                          | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                
- Lightweight                                                                                        | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
- No frequent use of "!important"                                                                    | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
  [Configure theme of whole page at once](#themes)                                                              | :heavy_check_mark: | :x:                | :x:                | :x:                
- Color scheme can be easily edited (file)                                                           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                
- Maintained                                                                                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                
- Useful extra features (classes etc.)                                                               | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: 
+ Integrated Auto Dark-Mode                                                                          | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                
  A [plain HTML file](https://www.december.com/html/demo/basic.html) can look good (with no changes) | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                
- No "Overused"-like design                                                                          | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
  Extra features for social media-like websites                                                      | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                
  Animations                                                                                         | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                
+ Color scheme can be easily edited (file)                                                           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                
+ Maintained                                                                                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                
+ No "Overused"-like design                                                                          | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
+ No frequent use of "!important"                                                                    | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
+ Lightweight                                                                                        | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
+ Pretty easy to use (also looks good without a lot of classes)                                               | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: 
+ Useful extra features (classes etc.)                                                               | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: 
 
 
 ***
